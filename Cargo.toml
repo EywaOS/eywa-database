@@ -1,0 +1,13 @@
+[package]
+name = "eywa-database"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eywa-errors = { path = "../eywa-errors" }
+
+sea-orm = { version = "1.1.19", features = ["sqlx-postgres", "runtime-tokio-rustls", "macros"] }
+serde = { version = "1.0", features = ["derive"] }
+tracing = "0.1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+futures = "0.3"
